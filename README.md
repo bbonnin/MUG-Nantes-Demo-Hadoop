@@ -50,3 +50,19 @@ hive -f hive/4-insert-max-min-prices.sql
 ```bash
 hive -f hive/5-select-max-min-prices.sql
 ```
+
+## Etape 3 - Spark demo
+- Clean (mongo shell)
+```bash
+use marketdata
+db.max_min_prices.drop()
+```
+- Lancement tâche Spark
+```bash
+spark/run-java-connector-demo.sh
+```
+- Check data (mongo shell)
+```bash
+use marketdata
+db.max_min_prices.find()
+```
