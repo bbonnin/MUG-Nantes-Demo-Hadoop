@@ -43,10 +43,10 @@ public class DemoHadoopConnector {
         // Configuration pour les lectures/écritures dans MongoDB
         //
         final Configuration inputConfig = new Configuration();
-        inputConfig.set("mongo.input.uri", "mongodb://localhost:27017/marketdata.minbars");
+        inputConfig.set("mongo.input.uri", "mongodb://localhost:27017/marketdata.stock_prices");
 
         final Configuration outputConfig = new Configuration();
-        outputConfig.set("mongo.output.uri", "mongodb://localhost:27017/marketdata.maxminbars");
+        outputConfig.set("mongo.output.uri", "mongodb://localhost:27017/marketdata.max_min_prices");
 
 
 
