@@ -64,5 +64,5 @@ spark/run-java-connector-demo.sh
 - Check data (mongo shell)
 ```bash
 use marketdata
-db.max_min_prices.find()
+db.max_min_prices.find().sort({"Day":1})
 ```
