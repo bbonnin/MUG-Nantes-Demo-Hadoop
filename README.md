@@ -76,7 +76,7 @@ hdfs dfs -rm -r data/spark_result
 ```bash
 spark/run-py-connector-demo.sh
 ```
-- Check data (mongo shell)
+- Check data 
 ```bash
 hdfs dfs -cat data/spark_result/part-00000
 ```
