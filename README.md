@@ -66,3 +66,17 @@ spark/run-java-connector-demo.sh
 use marketdata
 db.max_min_prices.find().sort({"Day":1})
 ```
+
+## Etape 3 - Alternative : Spark demo en Python
+- Clean HDFS
+```bash
+hdfs dfs -rm -r data/spark_result
+```
+- Lancement tâche Spark
+```bash
+spark/run-py-connector-demo.sh
+```
+- Check data (mongo shell)
+```bash
+hdfs dfs -cat data/spark_result/part-00000
+```
