@@ -38,3 +38,15 @@ hive -f hive/1-create-stock-prices.sql
 ```bash
 hive -f hive/2-select-from-stock-prices.sql
 ```
+- Création table des max/min
+```bash
+hive -f hive/3-create-max-min-prices.sql
+```
+- Insertion des données dans table des max/min
+```bash
+hive -f hive/4-insert-max-min-prices.sql
+```
+- Select dans table des max/min
+```bash
+hive -f hive/5-select-max-min-prices.sql
+```
