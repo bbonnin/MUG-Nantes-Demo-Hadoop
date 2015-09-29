@@ -1,0 +1,16 @@
+
+DROP TABLE IF EXISTS company;
+
+CREATE TABLE company (
+
+    symbol STRING,
+    name STRING
+)
+ROW FORMAT
+DELIMITED FIELDS TERMINATED BY ','
+STORED AS TEXTFILE;
+
+LOAD DATA INPATH 'data/companies.csv' INTO TABLE company;
+
+SELECT * FROM company;
+
