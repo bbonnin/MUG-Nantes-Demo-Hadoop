@@ -38,3 +38,45 @@ hive -f hive/1-create-stock-prices.sql
 ```bash
 hive -f hive/2-select-from-stock-prices.sql
 ```
+- Création table des max/min
+```bash
+hive -f hive/3-create-max-min-prices.sql
+```
+- Insertion des données dans table des max/min
+```bash
+hive -f hive/4-insert-max-min-prices.sql
+```
+- Select dans table des max/min
+```bash
+hive -f hive/5-select-max-min-prices.sql
+```
+
+## Etape 3 - Spark demo
+- Clean (mongo shell)
+```bash
+use marketdata
+db.max_min_prices.drop()
+```
+- Lancement tâche Spark
+```bash
+spark/run-java-connector-demo.sh
+```
+- Check data (mongo shell)
+```bash
+use marketdata
+db.max_min_prices.find().sort({"Day":1})
+```
+
+## Etape 3 - Alternative : Spark demo en Python
+- Clean HDFS
+```bash
+hdfs dfs -rm -r data/spark_result
+```
+- Lancement tâche Spark
+```bash
+spark/run-py-connector-demo.sh
+```
+- Check data 
+```bash
+hdfs dfs -cat data/spark_result/part-00000
+```
