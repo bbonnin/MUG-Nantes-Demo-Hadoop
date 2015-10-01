@@ -1,5 +1,6 @@
 # MUG-Nantes-Demo-Hadoop
 Demo  connecteur Hadoop de MongoDB
+
 Slides : http://fr.slideshare.net/BrunoBonnin/mug-nantes-mongodb-et-son-connecteur-pour-hadoop
 
 ## Etape 0 - Build
